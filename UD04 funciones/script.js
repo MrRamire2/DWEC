@@ -162,14 +162,16 @@ if(true) {
 // Ej: 4! = 4 * 3 * 2 * 1 = 24
 
 //SOLUCION
-//let numero = prompt("dame un número");
+let numero = prompt("dame un número");
+console.log(factorial(numero));
+
 function factorial(n) {
     if (n > 0) {
-        n = n * factorial(n-1);
-        return n;
+        return n * factorial(n-1);
+
     }else {
-        return n;
+        return 1;
     }
 }
-console.log(factorial(4));
+
 
