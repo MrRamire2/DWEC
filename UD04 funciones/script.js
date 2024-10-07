@@ -3,9 +3,9 @@
 //     return n * n;
 // };
 
-const mensaje = function() {
-    console.log("Función que no retorna nada");
-};
+// const mensaje = function() {
+//     console.log("Función que no retorna nada");
+// };
 
 // mensaje();
 // console.log(quadrat(3));
@@ -19,12 +19,12 @@ const mensaje = function() {
 //console.log(redondeaA(23, 10));
 
 
-let x = 10; // global
-if(true) {
-    let y = 20; //local respecto al bloque
-//    console.log(x);
-    var z = 30;
-};
+// let x = 10; // global
+// if(true) {
+//     let y = 20; //local respecto al bloque
+// //    console.log(x);
+//     var z = 30;
+// };
 
 //console.log(z);
 
@@ -162,16 +162,137 @@ if(true) {
 // Ej: 4! = 4 * 3 * 2 * 1 = 24
 
 //SOLUCION
-let numero = prompt("dame un número");
-console.log(factorial(numero));
+// let numero = prompt("dame un número");
+// console.log(factorial(numero));
 
-function factorial(n) {
-    if (n > 0) {
-        return n * factorial(n-1);
+// function factorial(n) {
+//     if (n > 0) {
+//         return n * factorial(n-1);
 
-    }else {
-        return 1;
+//     }else {
+//         return 1;
+//     }
+// }
+
+
+//CRECIMINETO DE LAS FUNCIONES
+// imprimirInventarioGranja(10, 15);
+
+// function imprimirInventarioGranja(vacas, pollos) {
+//     let cadenaVaca = String(vacas);
+
+//     while (cadenaVaca.length < 3) {
+//         cadenaVaca = "0" + cadenaVaca;
+//     }
+//     console.log(`${cadenaVaca} vacas`);
+
+
+//     let cadenaPollo = string(pollos);
+//     while (cadenaPollo.length < 3) {
+//         cadenaPollo = "0" + cadenaPollo;
+//     }
+//     console.log(`${cadenaPollo} pollos`);
+// }
+
+//imprimirInventarioGranja(10, 15);
+
+
+
+
+
+
+// function rellenarConCeros(numero, logitud) {
+//     let cadenaNumero = String(numero);
+
+//     while (cadenaNumero.length < 3) {
+//         cadenaNumero = "0" + cadenaNumero;
+//     }
+
+//     return cadenaNumero;
+// }
+
+
+// function imprimirinventarioGranja(vacas, pollos, cerdos) {
+
+//     console.log(`${rellenarConCeros(vacas, 5)} vacas`);
+//     console.log(`${rellenarConCeros(pollos, 15)} pollos`);
+//     console.log(`${rellenarConCeros(cerdos, 25)} cerdos`);
+// }
+
+
+// imprimirinventarioGranja(7, 12, 31)
+
+
+
+
+
+
+
+//Math.min()
+// let a = Math.min(2,4)
+// console.log(a);
+
+/*Escribe una función que devuelva el mínimo de 3
+números. */
+
+// numeroMinimo(43,32,21,10);
+
+// function numeroMinimo(num1, num2, num3, num4) {
+//     let a = Math.min(num1,num2)
+//     a = Math.min(a,num3)
+//     return console.log(Math.min(a,num4));
+//      }
+
+//10 14 23 21
+
+function ordenarNumeros(num1, num2, num3, num4) {
+    let n1 = num1;
+    let n2 = num2;
+    let n3 = num3;
+    let n4 = num4;
+    
+    for (let i = 0; i < 4; i++) {
+
+        let numero = "num" + i;
+        menor(numero, num4);
+
+        function menor(n1, n2){
+            return Math.min(n1,n2);
+        
+        }
+    
     }
 }
 
+
+
+
+    // Ejercicio recursividad:
+/*  Podemos usar % para verificar si un número es par o impar
+    al usar el %2 para ver si es divisible por dos.
+    Existe otra manera de definir si un número es par o impar:
+    - 0 es PAR
+    - 1 es IMPAR
+    - N: su paridad es la misma que N - 2
+    Define la función recursiva esPar que corresponda a esta
+    descripción. La función debe aceptar un solo parámetro (número
+    entero positivo) y devolver un booleano.
+    Probar con 50 y 75.
+*/
+
+
+
+// esPar(50);
+
+// function esPar(num) {
+//     if (num == 0){
+//         return ("True")
+//     }else if (num > 0 && num <= 1) {
+//         return ("False")
+//     }else {
+//         esPar(num);
+//     }
+// }
+
+//POR ARREGLAR
 
