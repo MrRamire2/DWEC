@@ -245,24 +245,31 @@ números. */
 
 //10 14 23 21
 
+
 function ordenarNumeros(num1, num2, num3, num4) {
-    let n1 = num1;
-    let n2 = num2;
-    let n3 = num3;
-    let n4 = num4;
+    // Colocar los números en un array
+    let numeros = [num1, num2, num3, num4];
     
-    for (let i = 0; i < 4; i++) {
-
-        let numero = "num" + i;
-        menor(numero, num4);
-
-        function menor(n1, n2){
-            return Math.min(n1,n2);
-        
+    // Implementar el algoritmo de burbuja
+    for (let i = 0; i < numeros.length; i++) {
+        for (let j = 0; j < numeros.length - 1; j++) {
+            // Comparar números consecutivos
+            if (numeros[j] > numeros[j + 1]) {
+                // Intercambiar si están en el orden incorrecto
+                let temp = numeros[j];
+                numeros[j] = numeros[j + 1];
+                numeros[j + 1] = temp;
+            }
         }
-    
     }
+
+    // Devolver el array ordenado
+    return numeros;
 }
+
+// Probar la función
+console.log(ordenarNumeros(8, 2, 5, 1)); // Salida: [1, 2, 5, 8]
+
 
 
 
@@ -282,17 +289,16 @@ function ordenarNumeros(num1, num2, num3, num4) {
 
 
 
-// esPar(50);
+function esPar(num) {
+    if (num == 0) {
+        return true; // 0 es par
+    } else if (num == 1) {
+        return false; // 1 es impar
+    } else {
+        return esPar(num - 2); // Restar 2 y llamar recursivamente
+    }
+}
 
-// function esPar(num) {
-//     if (num == 0){
-//         return ("True")
-//     }else if (num > 0 && num <= 1) {
-//         return ("False")
-//     }else {
-//         esPar(num);
-//     }
-// }
-
-//POR ARREGLAR
-
+// Prueba la función
+console.log(esPar(50)); // Salida: true
+console.log(esPar(51)); // Salida: false
