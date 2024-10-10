@@ -246,29 +246,7 @@ números. */
 //10 14 23 21
 
 
-function ordenarNumeros(num1, num2, num3, num4) {
-    // Colocar los números en un array
-    let numeros = [num1, num2, num3, num4];
-    
-    // Implementar el algoritmo de burbuja
-    for (let i = 0; i < numeros.length; i++) {
-        for (let j = 0; j < numeros.length - 1; j++) {
-            // Comparar números consecutivos
-            if (numeros[j] > numeros[j + 1]) {
-                // Intercambiar si están en el orden incorrecto
-                let temp = numeros[j];
-                numeros[j] = numeros[j + 1];
-                numeros[j + 1] = temp;
-            }
-        }
-    }
-
-    // Devolver el array ordenado
-    return numeros;
-}
-
-// Probar la función
-console.log(ordenarNumeros(8, 2, 5, 1)); // Salida: [1, 2, 5, 8]
+//
 
 
 
@@ -417,3 +395,15 @@ function contarPeces(cadena, posicionAnterior, contador = 0) {
 
 let mar = "~~~><>~~~><>><>~~~><>~~~~~~><>~><>~~~~><>~~~><>><>~~~><>~~~~~~><>~><>~";
 contarPeces(mar);
+
+/*
+alt + z = desfragmentar txt
+ctrl + l = seleccionar linea siguiente
+ctrl + b = abrir panel lateral
+ctrl + f = abrir buscador de la pestaña actual
+ctrl + h = buscar y sustituir 
+ctrl + k + c = comentar codigo
+ctrl + k + u = descomentar codigo
+ctrl + k + w = cerras todas las pestañas abiertas
+ctrl + shift + t = abrir ultimas páginas
+*/
