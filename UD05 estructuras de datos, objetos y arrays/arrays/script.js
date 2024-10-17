@@ -178,3 +178,116 @@ function sumar(...numeros) {
 }
 numeros = [1, 4, 3, 54];
 console.log(sumar(...numeros));
+
+
+
+
+
+
+
+//despues de ver un objeto, vemos algunas  cosas más de array
+
+//foreach ejecuta una función una vez por cada elemento del array
+// const numeros = [1, 2, 3, 4, 5];
+// numeros.forEach((numero)=>{
+//     //console.log(numero);
+//     let resultado = numero * 2;
+//     console.log(resultado);
+// });
+
+
+
+
+
+
+//map(): crea un nuevo array con los resultados de aplicar una función a cada elemento del array original 
+// const numeros = [1,2,3,4,5];
+// const doblandoNumeros = numeros.map((numero)=>{
+//     return numero * 2;
+// });
+
+// console.log(doblandoNumeros);
+// console.log(numeros);
+
+
+
+
+
+
+
+//filter(): crea un nuevo array con todos los elementos que cumplan una condición determinada
+// const numeros = [1, 2, 3, 4, 5];
+// const numerosPares = numeros.filter((numero)=>{
+//     return numero % 2 == 0;
+// });
+
+// console.log(numerosPares);
+
+
+
+
+//reduce(): aplica una función a un acumulador y a cada elemento del array de izquierda a derecha para reducirlo a un unico valor
+// const numeros = [1, 2, 3, 4, 5];
+// let suma = numeros.reduce((acumula, numero)=>{
+//     return acumula + numero
+// });
+
+// console.log(suma);
+
+
+
+
+
+//find(): devuelve el primer elemento del array que cumpla una condición determinada
+// const numeros = [1, 2, 3, 4, 5];
+// const numerosEncontrados = numeros.find((numero)=>{
+//     return numero % 3 == 0;
+// });
+
+// console.log(numerosEncontrados);
+
+
+
+
+
+//findIndex(): devuelve el indice del primer elemetno del array que cumple con una función de prueba, o "-1" si no encuentra
+// const numeros = [1, 2, 3, 4, 5];
+// const indiceEcontrado = numeros.findIndex((numero)=>{
+// return numero > 3;
+// });
+
+// console.log(indiceEcontrado);
+
+
+
+
+
+
+//some(): comprueba si almenos un elemento del array comple una condición determinada
+// const numeros = [1, 2, 3, 4, 5];
+// const tieneNumeroPar = numeros.some((numero)=>{
+//     return numero % 2 == 0;
+// });
+
+// console.log(tieneNumeroPar);
+
+
+
+
+
+
+
+//every(): comprueba si todos los elementos de un array cumplen con una condición
+// const numeros = [1, 2, 3, 4, 5];
+// const sonPares = numeros.every((numero)=>{
+//     return numero % 2 == 0;
+// });
+
+// console.log(sonPares);
+
+
+
+
+
+
+

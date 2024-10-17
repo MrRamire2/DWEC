@@ -177,15 +177,67 @@ calcula ademas la suma de las edades y muestramela al final.
  */
 
 
-function starWars(nombre, edad) {
-    this.nombre = nombre;
-    this.edad = edad;
+// function starWars(nombre, edad) {-
+//     this.nombre = nombre;
+//     this.edad = edad;
+// }
+
+ let nombresStarWars;
+
+ for(let nombre in nombres) {
+
+//     nombresStarWars[] = new starWars(nombres[nombre]);
 }
 
-let nombresStarWars;
+// console.log(nombresStarWars);
 
-for(let nombre in nombres) {
-    nombresStarWars[] = new starWars(nombres[nombre]);
-}
 
-console.log(nombresStarWars);
+
+
+
+//desestructuración de objetos
+// const persona = {
+//     nombre: "pere",
+//     edad: 33
+// };
+
+// const {edad, nombre} = persona;
+
+// console.log(nombre, edad);
+
+
+
+
+// const nombre = "toni";
+// const edad = "54";
+
+// const persona = {
+//     nombre,
+//     edad
+// };
+
+// console.log(persona.nombre, persona.edad);
+
+
+
+
+
+//ordenar matrices con objetos
+const ciudades = [{
+        municipio: "Zaragoza",
+        provincia: "Zaragoza"
+    },{
+        municipio: "Ávila",
+        provincia: "Ávila"
+    },{
+        municipio: "Madrid",
+        provincia: "Madrid"
+    },
+];
+
+ciudades.sort((a, b)=>{
+    return a.municipio.localeCompare(b.municipio);
+});
+
+
+console.log(ciudades);
