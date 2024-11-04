@@ -81,39 +81,79 @@
 
 
 
+// function start() {
+//     let miFecha = new Date();
+//     crono(miFecha);
+//     setInterval(function() {
+//         crono(miFecha);
+//     }, 1000);
+// }
+
+
+
+// function crono(miFecha) {
+
+//     let fecha = new Date();
+
+//     let hora = fecha.getHours();
+//     let minuto = fecha.getMinutes();
+//     let segundo = fecha.getSeconds();
+    
+
+//     let horas = rellenarConCeros(hora - miFecha.getHours(), 2);
+//     let minutos = rellenarConCeros(minuto - miFecha.getMinutes(), 2);
+//     let segundos = rellenarConCeros(segundo - miFecha.getSeconds(), 2);
+    
+//     // Elemento donde se mostrará la hora
+//     let laHora = document.getElementById('laHora');
+    
+//     // Asegurarse de que las horas también tengan dos dígitos
+//     horas = rellenarConCeros(horas, 2);
+    
+//     // Construir la cadena de la hora actual
+//     let horaActual = horas + ':' + minutos + ':' + segundos;
+    
+//     // Mostrar la hora actualizada en el DOM
+//     laHora.innerHTML = horaActual;
+// };
+
+
+
+
+
+
+
 function start() {
-    let miFecha = new Date();
-    crono(miFecha);
+    let miFecha = new Date(); // Start time
     setInterval(function() {
         crono(miFecha);
-    }, 1000);
+    }, 1000); // Update every second
 }
 
-
-
 function crono(miFecha) {
+    let fechaActual = new Date(); // Current time
 
-    let fecha = new Date();
+    // Calculate the time difference in milliseconds
+    let diff = fechaActual - miFecha;
 
-    let hora = fecha.getHours();
-    let minuto = fecha.getMinutes();
-    let segundo = fecha.getSeconds();
-    
+    // Convert milliseconds to hours, minutes, and seconds
+    let horas = Math.floor(diff / (1000 * 60 * 60));
+    let minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let segundos = Math.floor((diff % (1000 * 60)) / 1000);
 
-    let horas = rellenarConCeros(hora - miFecha.getHours(), 2);
-    let minutos = rellenarConCeros(minuto - miFecha.getMinutes(), 2);
-    let segundos = rellenarConCeros(segundo - miFecha.getSeconds(), 2);
-    
-    // Elemento donde se mostrará la hora
-    let laHora = document.getElementById('laHora');
-    
-    // Asegurarse de que las horas también tengan dos dígitos
+    // Format each unit to have two digits
     horas = rellenarConCeros(horas, 2);
-    
-    // Construir la cadena de la hora actual
-    let horaActual = horas + ':' + minutos + ':' + segundos;
-    
-    // Mostrar la hora actualizada en el DOM
-    laHora.innerHTML = horaActual;
-};
+    minutos = rellenarConCeros(minutos, 2);
+    segundos = rellenarConCeros(segundos, 2);
 
+    // Build the display string
+    let horaActual = `${horas}:${minutos}:${segundos}`;
+
+    // Display in the DOM
+    let laHora = document.getElementById('laHora');
+    laHora.innerHTML = horaActual;
+}
+
+function rellenarConCeros(num, length) {
+    return num.toString().padStart(length, '0');
+}
