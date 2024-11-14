@@ -1,0 +1,170 @@
+/* 
+Blanco: #F4FFFD 
+Rosa: #ED254E
+Amarillo: #F9DC5C
+azul: #011936
+*/
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+}
+
+main{
+    background-color: #F9DC5C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+h1{
+    color: #011936;
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+}
+
+p{
+    color: #011936;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span{
+    color: #ED254E;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    max-width: 450px;
+}
+
+.botones > button{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #011936;
+    background-color: #ED254E;
+    color: #011936;
+    font-family: "Galindo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.botones > button:hover{
+    transform: scale(1.05);
+    filter: saturate(200%);
+}
+
+.botones > .selected{
+    filter:grayscale(80%);
+}
+
+.botones > .selected:hover{
+    transform: none;
+    filter:grayscale(80%);
+}
+
+.muñeco{
+    position: relative;
+    height: 120px;
+    width: 130px;
+    margin-top: 30px;
+    border-bottom: solid 8px #011936;
+    border-radius: 5px;
+}
+
+.muñeco .active{
+    display: block;
+}
+
+.parte-1, .parte-2, .parte-3, .parte-4, .parte-5, .parte-6, .parte-7, .parte-8, .parte-9{
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #011936;
+}
+
+.parte-1{
+    top: 5px;
+    left: 40px;
+    height: 120px;
+    width: 8px;
+}
+
+.parte-2{
+    top: 5px;
+    left: 40px;
+    height: 8px;
+    width: 45px;
+}
+
+.parte-3{
+    top: 5px;
+    left: 77.5px;
+    height: 27px;
+    width: 5px;
+}
+
+.parte-4{
+    top: 30px;
+    left: 70px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.parte-5{
+    top: 50px;
+    left: 75px;
+    height: 40px;
+    width: 8px;
+
+}
+
+.parte-6{
+    top: 80px;
+    left: 65px;
+    height: 30px;
+    width: 8px;
+    transform: rotate(45deg);
+}
+
+.parte-7{
+    top: 80px;
+    left: 85px;
+    height: 30px;
+    width: 8px;
+    transform: rotate(-45deg);
+}
+
+.parte-8{
+    top: 48px;
+    left: 65px;
+    height: 30px;
+    width: 8px;
+    transform: rotate(45deg);
+}
+
+.parte-9{
+    top: 48px;
+    left: 85px;
+    height: 30px;
+    width: 8px;
+    transform: rotate(-45deg);
+}
