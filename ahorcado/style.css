@@ -34,6 +34,12 @@ h1{
     margin: 10px;
 }
 
+p.spaceLetters{
+    font-family: "Galindo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 p{
     color: #011936;
     font-family: "Lato", serif;
@@ -45,7 +51,7 @@ span{
     color: #ED254E;
 }
 
-.botones{
+.buttons{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -53,7 +59,7 @@ span{
     max-width: 450px;
 }
 
-.botones > button{
+.buttons > .button{
     height: 40px;
     width: 40px;
     margin: 5px;
@@ -66,16 +72,16 @@ span{
     font-style: normal;
 }
 
-.botones > button:hover{
+.buttons > .button:hover{
     transform: scale(1.05);
     filter: saturate(200%);
 }
 
-.botones > .selected{
+.buttons > .selected{
     filter:grayscale(80%);
 }
 
-.botones > .selected:hover{
+.buttons > .selected:hover{
     transform: none;
     filter:grayscale(80%);
 }
