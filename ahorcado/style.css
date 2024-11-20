@@ -86,7 +86,7 @@ span{
     filter:grayscale(80%);
 }
 
-.muñeco{
+.parts{
     position: relative;
     height: 120px;
     width: 130px;
@@ -95,39 +95,39 @@ span{
     border-radius: 5px;
 }
 
-.muñeco .active{
+.parts .active{
     display: block;
 }
 
-.parte-1, .parte-2, .parte-3, .parte-4, .parte-5, .parte-6, .parte-7, .parte-8, .parte-9{
+.part-1, .part-2, .part-3, .part-4, .part-5, .part-6, .part-7, .part-8, .part-9{
     display: none;
     position: absolute;
     border-radius: 5px;
     background-color: #011936;
 }
 
-.parte-1{
+.part-1{
     top: 5px;
     left: 40px;
     height: 120px;
     width: 8px;
 }
 
-.parte-2{
+.part-2{
     top: 5px;
     left: 40px;
     height: 8px;
     width: 45px;
 }
 
-.parte-3{
+.part-3{
     top: 5px;
     left: 77.5px;
     height: 27px;
     width: 5px;
 }
 
-.parte-4{
+.part-4{
     top: 30px;
     left: 70px;
     height: 20px;
@@ -135,7 +135,7 @@ span{
     border-radius: 10px;
 }
 
-.parte-5{
+.part-5{
     top: 50px;
     left: 75px;
     height: 40px;
@@ -143,7 +143,7 @@ span{
 
 }
 
-.parte-6{
+.part-6{
     top: 80px;
     left: 65px;
     height: 30px;
@@ -151,7 +151,7 @@ span{
     transform: rotate(45deg);
 }
 
-.parte-7{
+.part-7{
     top: 80px;
     left: 85px;
     height: 30px;
@@ -159,7 +159,7 @@ span{
     transform: rotate(-45deg);
 }
 
-.parte-8{
+.part-8{
     top: 48px;
     left: 65px;
     height: 30px;
@@ -167,7 +167,7 @@ span{
     transform: rotate(45deg);
 }
 
-.parte-9{
+.part-9{
     top: 48px;
     left: 85px;
     height: 30px;
