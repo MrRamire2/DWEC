@@ -24,6 +24,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    position: relative;
 }
 
 h1{
@@ -174,4 +175,43 @@ span{
     height: 30px;
     width: 8px;
     transform: rotate(-45deg);
+}
+
+.contenedor{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back{
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.back > div{
+    position: absolute;
+    border-radius: 5px;
+    background-color: #011936;
+}
+
+.back-1{
+    top: 21.5px;
+    transform: rotate(45deg);
+    height: 5px;
+    width: 20px;
+}
+
+.back-2{
+    top: 10px;
+    transform: rotate(-45deg);
+    height: 5px;
+    width: 20px;
+}
+
+.back-3{
+    top: 16px;
+    left: 5px;
+    height: 5px;
+    width: 30px;
 }

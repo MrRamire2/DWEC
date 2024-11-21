@@ -6,6 +6,8 @@ console.log(word);
 let lives = 9;
 let errors = 0;
 let letterCount = 0;
+let points = 0;
+let streak = 0;
 //palabra con guiones
 const arrayWord = hiddenWord(word);
 
@@ -24,9 +26,19 @@ spaceLetters.innerText = arrayWord.join(" ");
 buttons.addEventListener('click', (e) => {
     if (e.target.classList.contains('button') && !e.target.classList.contains('selected')) {
         e.target.classList.toggle('selected');
-
+        console.log(points);
         //implementación del compare
         positions = compare(e, word);
+
+        //if para dar puntos por rachas
+        // if (positions.length > 1) {
+        //     streak++;
+        //     points = (positions.length - 1 * 100) * streak;
+        // } else {
+        //     streak = 0;
+        //     points += -50;
+        // }
+
 
         //if para comprobar que la letra esté
         if (positions.length > 1) {
@@ -38,7 +50,8 @@ buttons.addEventListener('click', (e) => {
                 }
             });
             spaceLetters.innerText = arrayWord.join(" ");
-        } else {
+        }
+        else {
 
             //reducción en las vidas
             attempts.innerText = lives -= 1;
@@ -48,11 +61,11 @@ buttons.addEventListener('click', (e) => {
             errors++;
 
             //si llega a cero, redirigir a pagina de perdiste
-            if(lives < 1){
+            if (lives < 1) {
                 location.href = "./resultado.html";
             }
         }
-        if(letterCount >= word.length){
+        if (letterCount >= word.length) {
             alert("Ganaste");
         }
     }

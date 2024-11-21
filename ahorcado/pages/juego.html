@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/juego.css">
     <title>Ahorcado</title>
 </head>
+
 <body>
 
     <header></header>
 
     <main>
+        <div class="contenedor" onclick="location.href='../index.html'">
+            <div class="back">
+                <div class="back-1"></div>
+                <div class="back-2"></div>
+                <div class="back-3"></div>
+            </div>
+        </div>
+
         <h1>Ahorcado</h1>
 
         <p class="spaceLetters" id="spaceLetters"></p>
@@ -28,7 +38,7 @@
             <div class="part-8"></div>
             <div class="part-9"></div>
         </div>
-        
+
         <div class="hiddenWord"></div>
 
         <div class="buttons">
@@ -66,4 +76,5 @@
 
     <script src="../js/juego.js"></script>
 </body>
+
 </html>
