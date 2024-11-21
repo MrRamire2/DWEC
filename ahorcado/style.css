@@ -66,7 +66,7 @@ span{
     border-radius: 5px;
     border: 1px solid #011936;
     background-color: #ED254E;
-    background: radial-gradient(#ED254E 50%, #ae1b39);
+    background: radial-gradient(#ED254E 40%, #ae1b39);
     color: #011936;
     font-family: "Galindo", serif;
     font-weight: 400;
