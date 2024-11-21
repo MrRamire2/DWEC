@@ -1,0 +1,89 @@
+/* 
+Blanco: #F4FFFD 
+Rosa: #ED254E
+Amarillo: #F9DC5C
+azul: #011936
+*/
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+}
+
+main{
+    background: radial-gradient(#F9DC5C 50%, #fbb245);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+h1{
+    color: #011936;
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 60px;
+}
+
+label{
+  color: #011936;
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input{
+  border-radius: 5px;
+  border-color: #ED254E;
+  padding: 5px;
+  color: #011936;
+  font-family: "Galindo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input:active, input:focus{
+  outline-color: #ED254E;
+  outline-style: solid;
+  outline-width: 1px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.button{
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #011936;
+    background-color: #ED254E;
+    background: radial-gradient(#ED254E 40%, #ae1b39);
+    color: #011936;
+    font-family: "Galindo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    filter: saturate(200%);
+}
+
+.button.primero{
+  margin-top: 30px;
+}

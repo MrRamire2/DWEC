@@ -49,7 +49,7 @@ buttons.addEventListener('click', (e) => {
 
             //si llega a cero, redirigir a pagina de perdiste
             if(lives < 1){
-                location.href = "/ahorcado/pages/perdiste.html";
+                location.href = "./resultado.html";
             }
         }
         if(letterCount >= word.length){
