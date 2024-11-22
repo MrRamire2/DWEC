@@ -26,18 +26,23 @@ spaceLetters.innerText = arrayWord.join(" ");
 buttons.addEventListener('click', (e) => {
     if (e.target.classList.contains('button') && !e.target.classList.contains('selected')) {
         e.target.classList.toggle('selected');
-        console.log(points);
         //implementación del compare
         positions = compare(e, word);
 
-        //if para dar puntos por rachas
-        // if (positions.length > 1) {
-        //     streak++;
-        //     points = (positions.length - 1 * 100) * streak;
-        // } else {
-        //     streak = 0;
-        //     points += -50;
-        // }
+
+
+
+        // if para dar puntos por rachas
+        if (positions.length > 1) {
+            streak++;
+            points += ((positions.length - 1) * 100) * streak;
+        } else {
+            streak = 0;
+            points += -50;
+        }
+        console.log(points);
+
+
 
 
         //if para comprobar que la letra esté
@@ -60,13 +65,20 @@ buttons.addEventListener('click', (e) => {
             parts[errors].classList.toggle('active');
             errors++;
 
-            //si llega a cero, redirigir a pagina de perdiste
+            //si llega a cero, redirigir a pagina resultado
             if (lives < 1) {
+                localStorage.setItem("result", "Perdiste");
+                localStorage.setItem("points", points);
                 location.href = "./resultado.html";
             }
         }
+
+
+        //si gano, redirigir a pagina resultado
         if (letterCount >= word.length) {
-            alert("Ganaste");
+            localStorage.setItem("result", "Ganaste");
+            localStorage.setItem("points", points);
+            location.href = "./resultado.html";
         }
     }
 });
