@@ -12,25 +12,37 @@ points.innerText = localStorage.getItem("points");
 //evento para ingresar datos al storage
 buttonTry.addEventListener('click', () => {
 
-  //restaurar records anteriores
-  let results = JSON.parse(localStorage.getItem("results")) || [];
+  //if que me guarda los resultados si el usuario gana
+  if (localStorage.getItem("result") === "Ganaste") {
 
-  //ingresar datos al JSON results
-  results.push({ 'user': localStorage.getItem("user"), 'points': localStorage.getItem("points"), 'result': localStorage.getItem("result") });
+    //restaurar records anteriores
+    let results = JSON.parse(localStorage.getItem("results")) || [];
 
-  //subir de nuevo al storage
-  localStorage.setItem("results", JSON.stringify(results));
+    //ingresar datos al JSON results
+    results.push({ 'user': localStorage.getItem("user"), 'points': localStorage.getItem("points"), 'result': localStorage.getItem("result") });
+
+    //subir de nuevo al storage
+    localStorage.setItem("results", JSON.stringify(results));
+
+    storageSave();
+  }
 });
 
-//evento para ingresar datos al storage
-buttonMenu.addEventListener('click', () => {
+//FUNCTIONS
 
-  //restaurar records anteriores
-  let results = JSON.parse(localStorage.getItem("results")) || [];
+//función para guardar datos en el storage
+function storageSave() {
 
-  //ingresar datos al JSON results
-  results.push({ 'user': localStorage.getItem("user"), 'points': localStorage.getItem("points"), 'result': localStorage.getItem("result") });
+  //evento para ingresar datos al storage
+  buttonMenu.addEventListener('click', () => {
 
-  //subir de nuevo al storage
-  localStorage.setItem("results", JSON.stringify(results));
-});
+    //restaurar records anteriores
+    let results = JSON.parse(localStorage.getItem("results")) || [];
+
+    //ingresar datos al JSON results
+    results.push({ 'user': localStorage.getItem("user"), 'points': localStorage.getItem("points"), 'result': localStorage.getItem("result") });
+
+    //subir de nuevo al storage
+    localStorage.setItem("results", JSON.stringify(results));
+  });
+}

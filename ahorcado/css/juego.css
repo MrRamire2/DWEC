@@ -60,13 +60,12 @@ span{
     max-width: 450px;
 }
 
-.buttons > .button{
+.buttons > .button-style{
     height: 40px;
     width: 40px;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid #011936;
-    background-color: #ED254E;
     background: radial-gradient(#ED254E 40%, #ae1b39);
     color: #011936;
     font-family: "Galindo", serif;
@@ -74,18 +73,27 @@ span{
     font-style: normal;
 }
 
-.buttons > .button:hover{
+.buttons > .button-style:hover{
     transform: scale(1.05);
     filter: saturate(200%);
 }
 
-.buttons > .selected{
+.buttons > .incorrect{
     filter:grayscale(80%);
 }
 
-.buttons > .selected:hover{
+.buttons > .incorrect:hover{
     transform: none;
     filter:grayscale(80%);
+}
+
+.buttons > .correct{
+    background: radial-gradient(#226F54 40%, #19523e);
+}
+
+.buttons > .correct:hover{
+    transform: none;
+    filter:grayscale(0%);
 }
 
 .parts{

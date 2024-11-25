@@ -8,6 +8,7 @@ let errors = 0;
 let letterCount = 0;
 let points = 0;
 let streak = 0;
+let varFirstInteraction = 0;
 //palabra con guiones
 const arrayWord = hiddenWord(word);
 
@@ -22,13 +23,26 @@ spaceLetters.innerText = arrayWord.join(" ");
 
 //EVENTS
 
+// Añadir el event listener
+
+
+buttons.addEventListener('click', (e) => {
+    if (varFirstInteraction < 1) {
+        start();
+    }
+    varFirstInteraction++;
+});
+
+
+
 //cambiar color al boton en el momento que se presiona
 buttons.addEventListener('click', (e) => {
     if (e.target.classList.contains('button') && !e.target.classList.contains('selected')) {
-        e.target.classList.toggle('selected');
-        //implementación del compare
-        positions = compare(e, word);
 
+        start();
+
+        //implementación de la comparación para verificar si la letra está
+        positions = compare(e, word);
 
 
 
@@ -46,7 +60,11 @@ buttons.addEventListener('click', (e) => {
 
 
         //if para comprobar que la letra esté
+        //letra correcta
         if (positions.length > 1) {
+            //cambiar a verde la tecla
+            e.target.classList.toggle('correct');
+            e.target.classList.remove('button');
             let letter = positions[0];
             positions.forEach((position, i) => {
                 if (i > 0) {
@@ -56,7 +74,11 @@ buttons.addEventListener('click', (e) => {
             });
             spaceLetters.innerText = arrayWord.join(" ");
         }
+        //letra incorrecta
         else {
+            //cambiar a gris la tecla
+            e.target.classList.toggle('incorrect');
+            e.target.classList.remove('button');
 
             //reducción en las vidas
             attempts.innerText = lives -= 1;
@@ -84,7 +106,7 @@ buttons.addEventListener('click', (e) => {
 });
 
 
-//FUNCTION
+//FUNCTIONS
 
 //Comparar el elemento seleccionado con mi palabra a adivinar
 function compare(e, word) {
@@ -116,4 +138,46 @@ function hiddenWord(word) {
         arrayWord.push("_ ");
     }
     return arrayWord;
+}
+
+
+
+function start() {
+    //Iniciar tiempo
+    let myDate = new Date();
+    setInterval(function () {
+        time(myDate);
+    }, 1000); // Update every second
+}
+
+
+
+function time(myDate) {
+    let date = new Date();
+
+    //Calcular la diferencia de tiempo en milisegundos
+    let diff = date - myDate;
+
+    //convertir los milisegundos a horas, minutos y segundos
+    let hours = Math.floor(diff / (1000 * 60 * 60));
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    //formatear las variables para que tengan 2 numeros
+    hours = fillWithZeros(hours, 2);
+    minutes = fillWithZeros(minutes, 2);
+    seconds = fillWithZeros(seconds, 2);
+
+    // construir el string para mostrar en pantalla
+    let currentTime = `${hours}:${minutes}:${seconds}`;
+
+    //mostrar en la página (DOM)
+    let time = document.getElementById('time');
+    time.innerHTML = currentTime;
+}
+
+
+
+function fillWithZeros(num, length) {
+    return num.toString().padStart(length, '0');
 }
