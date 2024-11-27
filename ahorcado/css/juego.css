@@ -12,13 +12,21 @@ azul: #011936
     padding: 0;
 }
 
-body{
-    height: 100dvh;
+body {
+    min-height: 100dvh;
+    background: radial-gradient(#F9DC5C 50%, #fbb245);
     display: flex;
-}
+    flex-direction: column;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
 
 main{
-    background: radial-gradient(#F9DC5C 50%, #fbb245);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +41,12 @@ h1{
     font-weight: 400;
     font-style: normal;
     margin: 10px;
+}
+
+.time{
+    font-family: "Galindo", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 p.spaceLetters{
@@ -186,22 +200,21 @@ span{
 }
 
 .contenedor{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.back{
-    position: relative;
     height: 40px;
     width: 40px;
-}
-
-.back > div{
+  }
+  
+  .back {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .back>div {
     position: absolute;
     border-radius: 5px;
     background-color: #011936;
-}
+  }
 
 .back-1{
     top: 21.5px;
