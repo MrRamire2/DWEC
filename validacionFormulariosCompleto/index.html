@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Validador de formularios</title>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <form class="form" id="form">
+
+            <h2>Registrate con nosotros</h2>
+
+            <div class="form-control">
+                <label for="nameUser">Nombre de usuario:</label>
+                <input type="text" id="nameUser" placeholder="Ingresa tu nombre">
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Correo electrónico:</label>
+                <input type="text" id="email" placeholder="Ingresa tu correo electrónico">
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña">
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password2">Confirma tu contraseña:</label>
+                <input type="password" id="password2" placeholder="Ingresa de nuevo tu contraseña">
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="age">Edad:</label>
+                <input type="number" id="age" placeholder="Ingresa tu edad">
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="englishLevel">Nivel de ingles:</label>
+                <select id="englishLevel">
+                    <option value="none">Seleccione su nivel de ingles</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                </select>
+                <small>mensaje de error</small>
+            </div>
+
+            <div class="form-control">
+                <label for="terms">Aceptar términos y condiciones:</label>
+                <input type="checkbox" id="terms">
+                <small>mensaje de error</small>
+            </div>
+            
+            <button>Enviar</button>
+
+        </form>
+
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
