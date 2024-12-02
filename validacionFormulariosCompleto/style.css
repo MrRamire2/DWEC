@@ -65,11 +65,11 @@ h2{
     border-color: #777;
 }
 
-.correct input{
+.correct input, .correct select{
     border-color: var(--color_correct);
 }
 
-.form-control.error input{
+.form-control.error input, .form-control.error select{
     border-color: var(--color_incorrect);
 }
 
