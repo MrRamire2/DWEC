@@ -1,5 +1,6 @@
 //Array de palabras para adivinar
 const words = ['cielo', 'estrellas', 'avion', 'coche', 'programacion', 'reloj', 'viaje', 'instituto', 'gatos', 'guitarra', 'historia', 'playa'];
+// const words = ['historia'];
 
 //palabra seleccionada
 const word = wordRand(words);
@@ -13,6 +14,7 @@ let varFirstInteraction = 0;
 let timeDiff = 0;
 let timeClick = 0;
 let timeDivisor = 75;
+let countdownTime = 5;
 
 //palabra con guiones
 const arrayWord = hiddenWord(word);
@@ -23,6 +25,7 @@ const attempts = document.getElementById('attempts');
 const spaceLetters = document.getElementById('spaceLetters');
 const parts = document.querySelectorAll('.parts div');
 const gameTime = document.getElementById('time');
+const countdown = document.getElementById('countdown');
 
 spaceLetters.innerText = arrayWord.join(" ");
 
@@ -156,7 +159,16 @@ function start() {
         //descontar vidas por cada 5 segundos
         if (discountLifeByTime(timeClick, timeDiff)) {
             timeClick = timeDiff;
+            //hacer que aparezca el muñeco
+            parts[errors].classList.toggle('active');
+            errors++;
+            console.log(errors);
+            //regresar countdownTime a 5
+            countdownTime = 5;
         }
+
+        //descontar numeros en countdownTime
+        countdown.innerText = countdownTime--;
 
 
         //si llega a cero, redirigir a pagina resultado

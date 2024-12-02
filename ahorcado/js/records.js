@@ -1,10 +1,11 @@
 const words = ['cielo', 'estrellas', 'avion', 'coche', 'programacion', 'reloj', 'viaje', 'instituto', 'gatos', 'guitarra', 'historia', 'playa'];
+
 const selectWords = document.getElementById("select-words");
 const container = document.querySelector(".container");
 
 words.forEach(word => {
   selectWords.innerHTML +=
-    `<option value="${word}">${word}</option>`;
+    `<option class='option-word' value="${word}">${word}</option>`;
 });
 
 //tomar todos los resultados
@@ -23,28 +24,29 @@ selectWords.addEventListener("change", () => {
   <h2>Puntos</h2>
 </div>`;
 
+
   //imprimir resultados
   let rank = 1;
-  for (let i = 0; i < 10; i++) {
-    //formateando tiempo
-    let time = formatTime(results[i].time);
+results.forEach(result => {
 
-    // que se impriman por pantalla las que sean iguales a la palabra seleccionada
-    if (results[i].word === selectWords.value) {
-      //colocando contenido en la pagina
-      container.innerHTML +=
-        `<div class="result">
-        <h2  class="center"> ${rank} </h2>
-        <h2 class="name"> ${results[i].user} </h2>
-        <h2 class="time"> ${time} </h2>
-        <h2 class="points"> ${results[i].points} </h2>
-      </div>`;
-      rank++;
-    }
-  };
+   //formateando tiempo
+   let time = formatTime(result.time);
+
+       // que se impriman por pantalla las que sean iguales a la palabra seleccionada
+       if (result.word === selectWords.value && rank <= 10) {
+        //colocando contenido en la pagina
+        container.innerHTML +=
+          `<div class="result">
+          <h2  class="center"> ${rank} </h2>
+          <h2 class="name"> ${result.user} </h2>
+          <h2 class="time"> ${time} </h2>
+          <h2 class="points"> ${result.points} </h2>
+        </div>`;
+        rank++;
+      }
   
 });
-
+});
 
 
 //función para ordenar resultados

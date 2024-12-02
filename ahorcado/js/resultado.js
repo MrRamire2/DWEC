@@ -6,10 +6,9 @@ const buttons = document.querySelectorAll("button");
 //imprimir datos del localStorage
 result.innerText = localStorage.getItem("result");
 user.innerText = localStorage.getItem("user");
-//tomar dato y redondearlo
-let gamePoints = parseFloat(localStorage.getItem("points"));
-// Limitar a 2 decimales
-gamePoints = Math.round(gamePoints * 100) / 100; 
+//tomar dato y quitar decimales
+let gamePoints = Math.trunc(localStorage.getItem("points"));
+
 points.innerText = gamePoints;
 
 

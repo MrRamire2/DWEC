@@ -45,7 +45,7 @@ label{
 .select-words{
   height: 40px;
   width: auto;
-  margin: 5px;
+  padding: 0px 10px;
   border-radius: 5px;
   border: 1px solid #011936;
   background: radial-gradient(#ED254E 40%, #ae1b39);
@@ -53,6 +53,16 @@ label{
   font-family: "Galindo", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.option-word{
+  background-color: #ED254E;
+  color: #011936;
+}
+
+.select-words:hover{
+  transform: scale(1.02);
+  filter: saturate(110%);
 }
 
 h1 {
@@ -78,7 +88,7 @@ h1 {
 
 .result{
   display: grid;
-  grid-template-columns: 100px auto 120px 140px;
+  grid-template-columns: 70px auto 100px 90px;
   margin-bottom: 15px;
 }
 
