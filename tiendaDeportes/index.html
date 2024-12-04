@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tienda de articulos deportivos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tienda de artículos de deporte</h1>
+        <p>Mi super tienda de artículos deportivos</p>
+    </header>
+
+    <main>
+
+        <section id="listArticles">
+            <h1>articulos</h1>
+            <div id="articles"></div>
+        </section>
+
+
+        <section id="form-article">
+            <h2>añadir producto o articulo</h2>
+            <form id="add-article">
+
+                <label for="name">Nombre del articulo:</label>
+                <input type="text" id="name" required />
+
+                <label for="price">Precio:</label>
+                <input type="number" id="price" required>
+
+                <button type="submit">Añadir</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright by DWEC</p>
+    </footer>
+
+    <script src="./scriptAsync.js"></script>
+</body>
+
+</html>
