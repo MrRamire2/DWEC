@@ -1,0 +1,152 @@
+/* 
+Blanco: #F4FFFD 
+Rosa: #ED254E
+Amarillo: #F9DC5C
+azul: #011936
+*/
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Lato&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background: radial-gradient(#F9DC5C 50%, #fbb245);
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+label{
+  color: #011936;
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.select-words{
+  height: 40px;
+  width: auto;
+  padding: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #011936;
+  background: radial-gradient(#ED254E 40%, #ae1b39);
+  color: #011936;
+  font-family: "Galindo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.option-word{
+  background-color: #ED254E;
+  color: #011936;
+}
+
+.select-words:hover{
+  transform: scale(1.02);
+  filter: saturate(110%);
+}
+
+h1 {
+  color: #011936;
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.name, .points{
+  color: #011936;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 30px 0 15px;
+}
+
+.result{
+  display: grid;
+  grid-template-columns: 70px auto 100px 90px;
+  margin-bottom: 15px;
+}
+
+.center{
+  justify-self: center;
+}
+
+
+h2 {
+  display: inline-block;
+  color: #ED254E;
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  display: inline-block;
+  color: #011936;
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contenedor{
+  height: 40px;
+  width: 40px;
+}
+
+.back {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+}
+
+.back>div {
+  position: absolute;
+  border-radius: 5px;
+  background-color: #011936;
+}
+
+.back-1 {
+  top: 21.5px;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 20px;
+}
+
+.back-2 {
+  top: 10px;
+  transform: rotate(-45deg);
+  height: 5px;
+  width: 20px;
+}
+
+.back-3 {
+  top: 16px;
+  left: 5px;
+  height: 5px;
+  width: 30px;
+}

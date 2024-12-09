@@ -1,0 +1,20 @@
+{
+  "es": {
+    "palabras": {
+      "futbol": {
+        "facil": ["gol", "bola", "bota"],
+        "medio": [],
+        "dificil": []
+      },
+      "basquet": {
+        "facil": ["gol", "bola", "bota"],
+        "medio": [],
+        "dificil": []
+      }
+    },
+    "partidas": [
+      {"usuario": "jugador", "palabra": "gol", "dificultad": "facil", "puntuacion": 130, "categoria": "futbol", "errores": 3, "aciertos": 9, "tiempo": 1000, "fecha": "2024-12-05"},
+      {"usuario": "jugador2", "palabra": "gol", "dificultad": "facil", "puntuacion": 150, "categoria": "futbol", "errores": 3, "aciertos": 9, "tiempo": 1000, "fecha": "2024-12-05"}
+    ]
+  }
+}
