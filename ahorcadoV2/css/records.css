@@ -55,6 +55,11 @@ label{
   font-style: normal;
 }
 
+option:disabled {
+  background-color: #ec4e6e;
+  color: #011936;
+}
+
 .option-word{
   background-color: #ED254E;
   color: #011936;

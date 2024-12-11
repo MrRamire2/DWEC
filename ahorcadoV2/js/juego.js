@@ -267,6 +267,7 @@ const words = ['cielo', 'estrellas', 'avion', 'coche', 'programacion', 'reloj', 
 let word = wordRand(words);
 let varFirstInteraction = true;
 let lives = 9;
+let errors = 0;
 
 let timeDiff = 0;
 let timeClick = 0;
@@ -313,6 +314,7 @@ buttons.addEventListener('click', (e) => {
     positions = compare(e, word);
     changeColor(e, positions);
     appearLetter(positions);
+    countdownTimer(varFirstInteraction);
     varFirstInteraction = starTtimeFirstInteraction(varFirstInteraction);
     lives = discountLives(positions, lives);
     redirectLivesIsZero(lives);
@@ -399,6 +401,7 @@ function changeColor(e, positions) {
 
 
 
+//descontar vidas
 function discountLives(positions, lives) {
     if (positions.length <= 1) {
         let livesOfGame = --lives;
@@ -437,6 +440,39 @@ function starTtimeFirstInteraction(varFirstInteraction) {
 
 
 
+// Comenzar cronómetro
+function countdownTimer(varFirstInteraction) {
+    if (varFirstInteraction) {
+        // Actualizar la cuenta regresiva cada segundo
+        setInterval(() => {
+            const currentTime = Date.now();
+
+
+            // Verificar si es momento de descontar vidas
+            if (varFirstInteraction) {
+                timeClick = currentTime;
+                // Hacer que aparezca la parte del muñeco correspondiente al error
+                if (errors < parts.length) {
+                    parts[errors].classList.add('active');
+                    errors++;
+                    lives--;
+                    attempts.innerText = lives;
+                }
+                // Reiniciar el temporizador de cuenta regresiva
+                countdownTime = 5;
+            }
+            // Actualizar la cuenta regresiva en el DOM
+            countdown.innerText = countdownTime;
+            // Reducir el contador
+            if (countdownTime > 0) {
+                countdownTime--;
+            }
+        }, 1000); // Intervalo de 1 segundo
+    }
+}
+
+
+
 function formatTime(myDate) {
     let date = new Date();
     //Calcular la diferencia de tiempo en milisegundos
@@ -456,6 +492,14 @@ function formatTime(myDate) {
 
 
 
+//descontar vidas por cada 5 segundos
+function discountLifeByTime(lastClickTime, currentTime) {
+    // Devuelve true si han pasado 5 segundos desde el último clic
+    return (currentTime - lastClickTime) >= 5000;
+}
+
+
+
 function redirectLivesIsZero(lives) {
     //si llega a cero, redirigir a pagina resultado
     if (lives < 1) {
@@ -466,14 +510,14 @@ function redirectLivesIsZero(lives) {
 
 
 
-// //guardar en localstorage
-// function SaveLs(points, timeDiff, timeDivisor, word, errors) {
-//     // Guardar en localStorage los valores que recibe la función
-//     localStorage.setItem("points", points - (timeDiff / timeDivisor));
-//     localStorage.setItem("time", timeDiff);
-//     localStorage.setItem("word", word);
-//     localStorage.setItem("errors", errors);
+//guardar en localstorage
+function SaveLs(points, timeDiff, timeDivisor, word, errors) {
+    // Guardar en localStorage los valores que recibe la función
+    localStorage.setItem("points", points - (timeDiff / timeDivisor));
+    localStorage.setItem("time", timeDiff);
+    localStorage.setItem("word", word);
+    localStorage.setItem("errors", errors);
 
-//     // Redirigir a la página de resultados
+    // Redirigir a la página de resultados
 
-// }
+}
