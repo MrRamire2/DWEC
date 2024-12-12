@@ -1,0 +1,5 @@
+@echo off
+cd /d "C:\xampp\htdocs\student070\DWEC\servidor json"
+
+npx json-server --watch palabras.json
+pause

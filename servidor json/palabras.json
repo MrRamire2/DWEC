@@ -1,0 +1,14 @@
+{
+  "palabras": [
+    {
+      "id": 1,
+      "palabra": "Hola",
+      "dificultad": 0
+    },
+    {
+      "id": 2,
+      "palabra": "Adios",
+      "dificultad": 3
+    }
+  ]
+}
