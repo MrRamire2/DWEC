@@ -42,6 +42,11 @@ buttons.addEventListener('click', (e) => {
 
 
 
+            countdownTime = 5;
+            countdown.innerText = countdownTime--;
+
+
+
             // if para dar puntos por rachas
             if (positions.length > 1) {
                 streak++;
@@ -76,8 +81,7 @@ buttons.addEventListener('click', (e) => {
                 e.target.classList.toggle('incorrect');
                 e.target.classList.remove('button');
 
-                //reducción en las vidas
-                attempts.innerText = lives -= 1;
+                discountLife();
 
                 //hacer aparecer el muñeco
                 parts[errors].classList.toggle('active');
@@ -208,8 +212,12 @@ function time(myDate) {
 
 
 //rellenar con ceros para que siempre hayan 2 numeros
-function fillWithZeros(num, length) {
-    return num.toString().padStart(length, '0');
+function fillWithZeros(numero, longitud) {
+    let cadenaNumero = String(numero);
+    while (cadenaNumero.length < longitud) {
+        cadenaNumero = "0" + cadenaNumero;
+    }
+    return cadenaNumero;
 }
 
 
@@ -219,11 +227,18 @@ function discountLifeByTime(timeClick, timeDiff) {
     console.log(timeClick + 5000);
     console.log(timeDiff);
     if (timeDiff > (timeClick + 5000)) {
-        lives--;
-        attempts.innerText = lives;
+        discountLife();
         return true
     }
 
+}
+
+
+    //reducción en las vidas
+function discountLife() {
+    if (lives >= 0) {
+        attempts.innerText = lives--;
+    }
 }
 
 
