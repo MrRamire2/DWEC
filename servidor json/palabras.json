@@ -1,14 +1,29 @@
 {
   "palabras": [
     {
-      "id": 1,
-      "palabra": "Hola",
-      "dificultad": 0
+      "id": "1",
+      "palabra": "hola",
+      "dificultad": 2
     },
     {
-      "id": 2,
-      "palabra": "Adios",
-      "dificultad": 3
+      "id": "2",
+      "palabra": "asdad",
+      "dificultad": 1
+    },
+    {
+      "id": "3",
+      "palabra": "asdasda",
+      "dificultad": 1
+    },
+    {
+      "id": "4",
+      "palabra": "asd3waweqw",
+      "dificultad": 2
+    },
+    {
+      "id": "5",
+      "palabra": "dasd",
+      "dificultad": 1
     }
   ]
 }
