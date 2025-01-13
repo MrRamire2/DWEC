@@ -1,19 +1,21 @@
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
+import Titulo from "./components/Titulo";
+import Modal from "./components/Modal";
 
 //HOOK
 //useState
+
+//PROPS
 
 function App() {
   const [mostrarEventos, setMostrarEventos] = useState(true);
 
   const [eventos, setEventos] = useState([
     { titulo: "Examen DWEC", id: 1 },
-    { titulo: "Curso Programación", id: 2 },
+    { titulo: "Concurso Programame", id: 2 },
     { titulo: "Fiesta de Sant Antoni", id: 3 },
   ]);
-
-  console.log(mostrarEventos);
 
   const handleClick = (id) => {
     //version corta
@@ -35,8 +37,11 @@ function App() {
     console.log(id);
   };
 
+  const subtitulo = "Todos los eventos para Desarrollo de Aplicaciones Web";
+
   return (
     <div className="App">
+      <Titulo titulo="Eventos de DAW 24/25" subtitulo={subtitulo} />
       {mostrarEventos && (
         <div>
           <button onClick={() => setMostrarEventos(false)}>Ocultar eventos</button>
@@ -48,20 +53,22 @@ function App() {
         </div>
       )}
       {mostrarEventos && eventos.map((evento, index) => (
-        <div key={evento.id}>
+        <React.Fragment key={evento.id}>
           <h2>
             {index} - {evento.titulo}
           </h2>
           <button onClick={() => handleClick(evento.id)}>
             Eliminar evento
           </button>
-        </div>
+        </React.Fragment>
       ))}
+      <Modal>
+        <h2>Stem Talks</h2>
+        <p>No te lo pierdas: 30 y 31 de enero</p>
+        <a href="https://gdg.community.dev/events/details/google-gdg-menorca-presents-stem-talks-menorca-2025/" target="blank">Has click aquí</a>
+      </Modal>
     </div>
   );
 }
 
 export default App;
-
-
-
