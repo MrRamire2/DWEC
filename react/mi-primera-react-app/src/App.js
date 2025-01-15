@@ -1,14 +1,19 @@
 import "./App.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import Titulo from "./components/Titulo";
 import Modal from "./components/Modal";
+import eventosLista from "./components/eventosLista";
 
 //HOOK
 //useState
 
 //PROPS
 
+
+//EventosLista.js
+
 function App() {
+  const [muestraModal, setMuestraModal] = useState(true);
   const [mostrarEventos, setMostrarEventos] = useState(true);
 
   const [eventos, setEventos] = useState([
@@ -37,6 +42,12 @@ function App() {
     console.log(id);
   };
 
+  const handleCerrar = () => {
+    setMuestraModal(false);
+  }
+
+  console.log(muestraModal);
+
   const subtitulo = "Todos los eventos para Desarrollo de Aplicaciones Web";
 
   return (
@@ -49,24 +60,18 @@ function App() {
       )}
       {!mostrarEventos && (
         <div>
-          <button onClick={() => setMostrarEventos(true)}>Mostrar eventos</button>
+        <button onClick={() => setMostrarEventos(true)}>Mostrar eventos</button>
         </div>
       )}
-      {mostrarEventos && eventos.map((evento, index) => (
-        <React.Fragment key={evento.id}>
-          <h2>
-            {index} - {evento.titulo}
-          </h2>
-          <button onClick={() => handleClick(evento.id)}>
-            Eliminar evento
-          </button>
-        </React.Fragment>
-      ))}
-      <Modal>
+      {mostrarEventos && eventosLista({ eventos: eventos, handleClick: handleClick})}
+      {muestraModal && <Modal handleCerrar={handleCerrar}>
         <h2>Stem Talks</h2>
         <p>No te lo pierdas: 30 y 31 de enero</p>
-        <a href="https://gdg.community.dev/events/details/google-gdg-menorca-presents-stem-talks-menorca-2025/" target="blank">Has click aquí</a>
-      </Modal>
+        <a href="https:// gdg.community.dev/events/details/google-gdg-menorca-presents-stem-talks-menorca-2025/" target="blank">Has click aquí</a>
+      </Modal>}
+      <div>
+        <button onClick={() => {setMuestraModal(true)}}>Mostar Modal</button>
+      </div>
     </div>
   );
 }
