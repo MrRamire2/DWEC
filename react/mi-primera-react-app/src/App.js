@@ -67,7 +67,6 @@ function App() {
       {muestraModal && <Modal handleCerrar={handleCerrar}>
         <h2>Stem Talks</h2>
         <p>No te lo pierdas: 30 y 31 de enero</p>
-        <a href="https:// gdg.community.dev/events/details/google-gdg-menorca-presents-stem-talks-menorca-2025/" target="blank">Has click aquí</a>
       </Modal>}
       <div>
         <button onClick={() => {setMuestraModal(true)}}>Mostar Modal</button>
