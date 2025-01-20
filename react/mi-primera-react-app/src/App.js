@@ -2,7 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import Titulo from "./components/Titulo";
 import Modal from "./components/Modal";
-import eventosLista from "./components/eventosLista";
+import eventosLista from "./components/EventosLista";
+import EventoNuevoForm from "./components/EventoNuevoForm";
 
 //HOOK
 //useState
@@ -16,11 +17,14 @@ function App() {
   const [muestraModal, setMuestraModal] = useState(true);
   const [mostrarEventos, setMostrarEventos] = useState(true);
 
-  const [eventos, setEventos] = useState([
-    { titulo: "Examen DWEC", id: 1 },
-    { titulo: "Concurso Programame", id: 2 },
-    { titulo: "Fiesta de Sant Antoni", id: 3 },
-  ]);
+  const [eventos, setEventos] = useState([]);
+
+  const addEvento = (evento) => {
+    setEventos((eventosPrevios) => {
+      return [...eventosPrevios, evento];
+    })
+    setMuestraModal(false);
+  }
 
   const handleClick = (id) => {
     //version corta
@@ -42,10 +46,6 @@ function App() {
     console.log(id);
   };
 
-  const handleCerrar = () => {
-    setMuestraModal(false);
-  }
-
   console.log(muestraModal);
 
   const subtitulo = "Todos los eventos para Desarrollo de Aplicaciones Web";
@@ -64,12 +64,11 @@ function App() {
         </div>
       )}
       {mostrarEventos && eventosLista({ eventos: eventos, handleClick: handleClick})}
-      {muestraModal && <Modal handleCerrar={handleCerrar}>
-        <h2>Stem Talks</h2>
-        <p>No te lo pierdas: 30 y 31 de enero</p>
+      {muestraModal && <Modal destino={document.body} esExterno={true}>
+        <EventoNuevoForm addEvento={addEvento}/>
       </Modal>}
       <div>
-        <button onClick={() => {setMuestraModal(true)}}>Mostar Modal</button>
+        <button onClick={() => {setMuestraModal(true)}}>Crear nuevo evento</button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import "./titulo.css";
+import "./Titulo.css";
 
 export default function Titulo({titulo, subtitulo}) {
     return(
