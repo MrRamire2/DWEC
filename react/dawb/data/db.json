@@ -1,0 +1,29 @@
+{
+    "asignaturas": [
+        {
+            "nombre": "Desarrollo Web en Entorno Cliente",
+            "horas totales": "125",
+            "id": "1"
+        },
+        {
+            "nombre": "Desarrollo Web en Entorno Servidor",
+            "horas totales": "165",
+            "id": "2"
+        },
+        {
+            "nombre": "Despliegue de Aplicaciones Web",
+            "horas totales": "90",
+            "id": "3"
+        },
+        {
+            "nombre": "Diseño de Interfaces Web",
+            "horas totales": "125",
+            "id": "4"
+        }
+    ],
+    "aulas": [
+        {
+            "numero": "116"
+        }
+    ]
+}
