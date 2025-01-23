@@ -14,3 +14,12 @@
     list-style-type: none;
     margin: 20px 0;
   }
+  .asignatura-lista .filtros {
+    display: flex;
+    gap: 10px;
+  }
+  .asignatura-lista button{
+  padding: 10px;
+  font-size: 16px;
+  flex-grow: 1;
+}
