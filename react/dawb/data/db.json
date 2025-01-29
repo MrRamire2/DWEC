@@ -23,6 +23,30 @@
             "horas totales": "125",
             "id": "4",
             "idioma": "Ingles"
+        },
+        {
+            "nombre": "Desarrollo Web en Entorno Cliente",
+            "horas totales": "125",
+            "id": "5",
+            "idioma": "Catalan"
+        },
+        {
+            "nombre": "Desarrollo Web en Entorno Servidor",
+            "horas totales": "165",
+            "id": "6",
+            "idioma": "Catalan"
+        },
+        {
+            "nombre": "Despliegue de Aplicaciones Web",
+            "horas totales": "90",
+            "id": "7",
+            "idioma": "Catalan"
+        },
+        {
+            "nombre": "Diseño de Interfaces Web",
+            "horas totales": "125",
+            "id": "8",
+            "idioma": "Ingles"
         }
     ]
 }

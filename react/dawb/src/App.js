@@ -1,13 +1,14 @@
 import './App.css';
-import AsignaturasLista from './components/AsignaturasLista';
+import AsignaturaLista from './components/AsignaturaLista';
 
-//userEffect
+
+// useEffect
 
 
 function App() {
   return (
     <div className="App">
-      <AsignaturasLista />
+        <AsignaturaLista />
     </div>
   );
 }
