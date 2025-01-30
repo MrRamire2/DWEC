@@ -1,52 +1,100 @@
 {
-    "asignaturas": [
-        {
-            "nombre": "Desarrollo Web en Entorno Cliente",
-            "horas totales": "125",
-            "id": "1",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Desarrollo Web en Entorno Servidor",
-            "horas totales": "165",
-            "id": "2",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Despliegue de Aplicaciones Web",
-            "horas totales": "90",
-            "id": "3",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Diseño de Interfaces Web",
-            "horas totales": "125",
-            "id": "4",
-            "idioma": "Ingles"
-        },
-        {
-            "nombre": "Desarrollo Web en Entorno Cliente",
-            "horas totales": "125",
-            "id": "5",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Desarrollo Web en Entorno Servidor",
-            "horas totales": "165",
-            "id": "6",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Despliegue de Aplicaciones Web",
-            "horas totales": "90",
-            "id": "7",
-            "idioma": "Catalan"
-        },
-        {
-            "nombre": "Diseño de Interfaces Web",
-            "horas totales": "125",
-            "id": "8",
-            "idioma": "Ingles"
-        }
-    ]
+  "asignaturas": [
+    {
+      "nombre": "Desarrollo Web en Entorno Cliente",
+      "horas totales": "125",
+      "id": "1",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Desarrollo Web en Entorno Servidor",
+      "horas totales": "165",
+      "id": "2",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Despliegue de Aplicaciones Web",
+      "horas totales": "90",
+      "id": "3",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Diseño de Interfaces Web",
+      "horas totales": "125",
+      "id": "4",
+      "idioma": "Inglés"
+    },
+    {
+      "nombre": "Desarrollo Web en Entorno Cliente",
+      "horas totales": "125",
+      "id": "5",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Desarrollo Web en Entorno Servidor",
+      "horas totales": "165",
+      "id": "6",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Despliegue de Aplicaciones Web",
+      "horas totales": "90",
+      "id": "7",
+      "idioma": "Catalán"
+    },
+    {
+      "nombre": "Diseño de Interfaces Web",
+      "horas totales": "125",
+      "id": "8",
+      "idioma": "Inglés"
+    },
+    {
+      "id": 46,
+      "nombre": "Mates",
+      "horas totales": "123",
+      "idioma": "Inglés"
+    },
+    {
+      "id": 317,
+      "nombre": "Lenguaje",
+      "horas totales": "123",
+      "idioma": "Inglés"
+    },
+    {
+      "id": 496,
+      "nombre": "Nueva asignatura",
+      "horas totales": "344",
+      "idioma": "Catalán"
+    },
+    {
+      "id": 665,
+      "nombre": "Hola",
+      "horas totales": "12",
+      "idioma": "Catalán"
+    },
+    {
+      "id": 952,
+      "nombre": "Holaa",
+      "horas totales": "123",
+      "idioma": "Inglés"
+    },
+    {
+      "id": 387,
+      "nombre": "Holaaa",
+      "horas totales": "23",
+      "idioma": "Catalán"
+    },
+    {
+      "id": 77,
+      "nombre": "hi",
+      "horas totales": "12",
+      "idioma": "Catalán"
+    },
+    {
+      "id": 588,
+      "nombre": "hi",
+      "horas totales": "23",
+      "idioma": "Inglés"
+    }
+  ]
 }

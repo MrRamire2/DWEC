@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import './App.css';
+import AsignaturaForm from './components/AsignaturaForm';
 import AsignaturaLista from './components/AsignaturaLista';
 
 
@@ -6,10 +8,14 @@ import AsignaturaLista from './components/AsignaturaLista';
 
 
 function App() {
+  
+  const [actualizar, setActualizar] = useState(false);
+
   return (
-    <div className="App">
-        <AsignaturaLista />
-    </div>
+      <div className="App">
+          <AsignaturaForm setActualizar={setActualizar} />
+          <AsignaturaLista actualizar={actualizar} />
+      </div>
   );
 }
 

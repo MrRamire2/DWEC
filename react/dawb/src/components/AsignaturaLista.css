@@ -24,18 +24,5 @@
     font-size: 16px;
     flex-grow: 1;
   }
-  .form-add{
-    position: sticky;
-    bottom: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #c4c4c4;
-    border-radius: 4px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.08);
-    background-color: #e4e4e4;
-  }
-  .form-add > div{
-    margin-bottom: 10px;
-  }
   /* (• ε •) */
   /* (ง •̀_•́)ง */
