@@ -12,7 +12,7 @@ export default function Carta({ carta, handleEleccion, girada, deshabilitado }) 
         <div className='card'>
             <div className={girada ? "flipped" : ""}>
                 <img className='front' src={carta.src} alt="Frontal" />
-                <img className='back' src="./img/cubierta.webp" onClick={handleClick} alt="Cubierta" />
+                <img className='back' src="./img/cubierta-medio.webp" onClick={handleClick} alt="Cubierta" />
             </div>
         </div>
     )

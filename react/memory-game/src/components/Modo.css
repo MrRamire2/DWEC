@@ -1,0 +1,15 @@
+.modo-contenedor{
+    margin-top: 30px;
+}
+.modo-contenedor label{
+    display: flex;
+    justify-content: center;
+}
+.modo-selector{
+    margin-left: 10px;
+    padding: 6px 12px;
+    background: #fff;
+    color: #B5591D;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 4px;
+}
