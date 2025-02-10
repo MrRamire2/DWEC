@@ -93,7 +93,7 @@ function App() {
       <h1>Joc de Memoria</h1>
       <button onClick={mezclaCartas}>Mezclar Cartas</button>
 
-      <Modo />
+      <Modo mezclaCartas={mezclaCartas}/>
 
       <div className='card-grid'>
 

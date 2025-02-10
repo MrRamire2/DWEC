@@ -1,0 +1,33 @@
+{
+    "receptes": [
+        {
+            "id": "1",
+            "nom": "vianda",
+            "autor": "Erik Michelin",
+            "ingredients": ["caldo casero", "tiburons", "pilotes", "sopas"],
+            "elaboracio": "Esta receta de Los fogones tradicionales no tiene especificadas todas las cantidades de los ingredientes. Se trata de un plato de antaño que, cada cociner@ prepara a su gusto, siendo variables las medidas de cada uno de los productos que se utilizan."
+        },
+        {
+            "id": "2",
+            "nom": "creps",
+            "autor": "Sergi",
+            "ingredients": ["llet", "ous", "farina", "sucre"],
+            "elaboracio": "Bate los huevos en un bol, añade la leche a temperatura ambiente, incorpora la harina y mezcla bien; deja reposar la masa en la nevera unas horas si lo deseas, calienta una sartén con mantequilla, vierte la masa extendiéndola bien, cocina por ambos lados hasta dorar y repite el proceso."
+        },
+        {
+            "id": "3",
+            "nom": "tiramisú",
+            "autor": "Guillem",
+            "ingredients": ["mascarpone", "ous", "sucre", "cafè", "melindros", "cacau en pols"],
+            "elaboracio": "Separa els rovells de les clares i bat els rovells amb el sucre fins a obtenir una crema blanquinosa; afegeix el mascarpone i mescla suaument, munta les clares a punt de neu i incorpora-les amb moviments envoltants, suca els melindros en cafè i col·loca una capa en un motlle, alterna capes de crema de mascarpone i melin"
+        },
+        {
+            "id": "4",
+            "nom": "tarta de queso",
+            "autor": "Joan",
+            "ingredients": ["formatge cremós", "ous", "sucre", "nata", "farina"],
+            "elaboracio": "Bate los huevos con el azúcar, añade el queso crema y mezcla bien; incorpora la nata y la harina hasta obtener una masa homogénea, vierte en un molde engrasado y hornea a 180°C durante 40-50 minutos hasta que esté dorada y firme, deja enfriar antes de desmoldar."
+        }
+        
+    ]
+}

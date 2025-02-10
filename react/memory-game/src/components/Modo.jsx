@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import App from '../App';
 import './Modo.css';
 
 export default function Modo({ mezclaCartas }) { // Asegúrate de que mezclaCartas sea pasado como prop
