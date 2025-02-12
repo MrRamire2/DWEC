@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Inici from './pages/Inici';
 import Cuiners from './pages/Cuiners';
 import Plats from './pages/Plats';
+import Recepta from './pages/Recepta';
 
 
 
@@ -13,7 +14,7 @@ function App() {
       <BrowserRouter>
         <nav>
           <h1>Les Meves Receptes</h1>
-          <NavLink to="/">Inici</NavLink>
+          <NavLink exact to="/">Inici</NavLink>
           <NavLink to="/Cuiners">Cuiners</NavLink>
           <NavLink to="/Plats">Plats</NavLink>
         </nav>
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/Plats">
             <Plats />
+          </Route>
+          <Route path="/receptes/:id">
+            <Recepta />
           </Route>
         </Switch>
       </BrowserRouter>
