@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink, Redirect } from 'react-router-dom';
 import Inici from './pages/Inici';
 import Cuiners from './pages/Cuiners';
 import Plats from './pages/Plats';
@@ -30,6 +30,9 @@ function App() {
           </Route>
           <Route path="/receptes/:id">
             <Recepta />
+          </Route>
+          <Route path="*">
+            <Redirect to="/" />
           </Route>
         </Switch>
       </BrowserRouter>

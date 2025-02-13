@@ -25,7 +25,6 @@ export const useFetch = (url) => {
             } catch(err){
                 setCargando(false);
                 setError('No se pudieron obtener los datos...');
-                console.log(err);
             }
 
         };
